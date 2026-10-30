@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "assets": "node scripts/copy-assets.js",
+    "optimize-images": "python scripts/optimize-hero.py",
     "dev": "npm run assets && vite",
     "build": "npm run assets && vite build",
     "preview": "npm run build && vite preview --host 127.0.0.1 --port 4173"

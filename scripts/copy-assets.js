@@ -1,4 +1,3 @@
-import { spawnSync } from "node:child_process";
 import { cpSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,15 +12,4 @@ for (const folder of ["brand", "icons", "hero"]) {
   cpSync(resolve(source, folder), dest, { recursive: true });
 }
 
-cpSync(
-  resolve(source, "brand", "phoenix-emblem.png"),
-  resolve(target, "favicon.png"),
-);
-
-const optimized = spawnSync("python", [resolve(root, "scripts", "optimize-hero.py")], {
-  stdio: "inherit",
-});
-
-if (optimized.status !== 0) {
-  console.warn("Hero WebP was not written. The original PNG will be used instead.");
-}
+cpSync(resolve(source, "favicon.png"), resolve(target, "favicon.png"));
