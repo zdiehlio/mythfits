@@ -1,0 +1,19 @@
+{
+  "name": "mythfits",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/copy-assets.js",
+    "dev": "npm run assets && vite",
+    "build": "npm run assets && vite build",
+    "preview": "npm run build && vite preview --host 127.0.0.1 --port 4173"
+  },
+  "dependencies": {
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.12"
+  }
+}

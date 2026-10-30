@@ -1,0 +1,10 @@
+node_modules
+dist
+data/submissions.json
+public/brand
+public/hero
+public/icons
+public/favicon.png
+_opt_test
+.DS_Store
+*.log
