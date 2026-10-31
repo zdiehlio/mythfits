@@ -75,7 +75,7 @@ select {
 }
 
 .shell {
-  width: min(var(--shell), calc(100% - 2.5rem));
+  width: max(80%, min(var(--shell), calc(100% - 2.5rem)));
   margin-inline: auto;
 }
 
@@ -189,6 +189,7 @@ select {
 .brand {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .brand picture,
@@ -206,6 +207,8 @@ select {
 .site-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
   gap: 1.7rem;
 }
 
@@ -386,7 +389,7 @@ select {
 }
 
 .process-list img {
-  width: 4.5rem;
+  width: auto;
   height: 4.5rem;
 }
 
@@ -426,6 +429,13 @@ select {
   font-size: 1.12rem;
 }
 
+.approach > .shell > .eyebrow,
+.approach > .shell > h2,
+.approach > .shell > .section-intro {
+  margin-inline: auto;
+  text-align: center;
+}
+
 .approach-steps {
   margin: 2.75rem 0 0;
   padding: 0;
@@ -433,17 +443,18 @@ select {
 }
 
 .approach-steps li {
-  display: grid;
-  grid-template-columns: 4.5rem 1fr;
-  gap: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding: 1.7rem 0;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .approach-steps img {
-  width: 3.6rem;
+  width: auto;
   height: 3.6rem;
-  margin-top: 0.2rem;
 }
 
 .step-index {
@@ -470,6 +481,7 @@ select {
 
 .approach-steps p:last-child {
   max-width: 42rem;
+  margin-inline: auto;
   margin-bottom: 0;
   color: var(--muted);
 }
@@ -863,6 +875,6 @@ section[id] {
   }
 
   .shell {
-    width: min(var(--shell), calc(100% - 2rem));
+    width: max(80%, min(var(--shell), calc(100% - 2rem)));
   }
 }
