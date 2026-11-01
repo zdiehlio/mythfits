@@ -6,8 +6,27 @@
 
 export const site = {
   name: "Mythfits",
+  url: "https://mythfits.io/",
   description:
-    "Mythfits partners with people who have ideas worth building — engineering, AI, and prototypes for stronger communities and a healthier planet.",
+    "Mythfits is an engineering, AI, and prototyping partner for ideas that strengthen communities or help the planet. Explore, prototype, and test with us.",
+  seo: {
+    knowsAbout: [
+      "Software engineering",
+      "Artificial intelligence",
+      "Rapid prototyping",
+      "Product discovery",
+      "Social impact technology",
+      "Community technology",
+      "Climate and environmental technology",
+    ],
+    serviceTypes: [
+      "Engineering partnership",
+      "AI development",
+      "Prototype development",
+      "User testing and iteration",
+    ],
+  },
+  shareImage: "/hero/og-image.jpg",
   logo: "/brand/logo-light-background.png",
   emblem: "/brand/phoenix-emblem.png",
   stackedLogo: "/brand/logo-dark-background-stacked.png",
@@ -94,6 +113,43 @@ export const site = {
     ],
     asideTitle: "What we build toward",
     aside: ["Stronger communities", "A healthier planet", "A way for potential to become real"],
+  },
+  faq: {
+    id: "questions",
+    eyebrow: "Questions",
+    title: "What to know before you reach out.",
+    items: [
+      {
+        question: "What does Mythfits do?",
+        answer:
+          "Mythfits is an engineering, AI, and prototyping partner for people with ideas that strengthen communities or leave the planet healthier. We help you explore the idea, build a working prototype, and test and refine it with the people it is meant to help.",
+      },
+      {
+        question: "Who is Mythfits for?",
+        answer:
+          "People who can already see a better version of something — a community system, a tool, a practice, a place — and do not yet have a way to build it. You bring the idea and the reason it matters; we bring the engineering.",
+      },
+      {
+        question: "What kinds of projects do you take on?",
+        answer:
+          "Social impact and community projects, and climate and environmental ideas. Every project has to strengthen communities or leave the planet healthier. Those are the tests we use when we decide where to spend engineering time.",
+      },
+      {
+        question: "What can you build?",
+        answer:
+          "Prototypes you can hold, click, or try in the field — software, AI-powered tools, and engineered things that make an idea tangible. We start with a narrow first version and widen the work only when the idea earns it.",
+      },
+      {
+        question: "How does working together start?",
+        answer:
+          "Tell us your idea and who it helps. We read every note. If there is a fit, we write back about a first conversation, where we name a small first step and say honestly if Mythfits is the right partner.",
+      },
+      {
+        question: "Do I keep my idea?",
+        answer:
+          "Yes. The idea and its purpose stay yours. What we build, what we skip, and when we stop are decisions we make together.",
+      },
+    ],
   },
   form: {
     id: "talk",

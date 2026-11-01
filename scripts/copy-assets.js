@@ -12,4 +12,6 @@ for (const folder of ["brand", "icons", "hero"]) {
   cpSync(resolve(source, folder), dest, { recursive: true });
 }
 
-cpSync(resolve(source, "favicon.png"), resolve(target, "favicon.png"));
+for (const file of ["favicon.png", "apple-touch-icon.png"]) {
+  cpSync(resolve(source, file), resolve(target, file));
+}

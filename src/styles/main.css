@@ -393,7 +393,7 @@ select {
   height: 4.5rem;
 }
 
-.process-list h2 {
+.process-list h3 {
   margin: 1.15rem 0 0.4rem;
   font-size: clamp(1.55rem, 2vw, 1.9rem);
 }
@@ -405,6 +405,7 @@ select {
 }
 
 .approach,
+.faq,
 .talk {
   padding: 5.5rem 0;
 }
@@ -414,6 +415,7 @@ select {
 }
 
 .approach h2,
+.faq h2,
 .talk h2,
 .vision h2 {
   max-width: 14ch;
@@ -588,6 +590,35 @@ select {
   font-weight: 600;
 }
 
+.faq {
+  background: var(--ivory);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+  margin: 2.5rem 0 0;
+}
+
+.faq-list div {
+  padding-top: 0.95rem;
+  border-top: 3px solid var(--ember);
+}
+
+.faq-list dt {
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.faq-list dd {
+  margin: 0;
+  color: var(--muted);
+}
+
 .talk {
   background: var(--paper);
 }
@@ -750,11 +781,13 @@ section[id] {
 @media (max-width: 860px) {
   .vision-grid,
   .talk-grid,
-  .commitments ul {
+  .commitments ul,
+  .faq-list {
     grid-template-columns: 1fr;
   }
 
   .approach h2,
+  .faq h2,
   .talk h2,
   .vision h2,
   .hero h1 {
@@ -864,6 +897,7 @@ section[id] {
   }
 
   .approach,
+  .faq,
   .talk,
   .vision {
     padding: 3.5rem 0;

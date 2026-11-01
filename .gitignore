@@ -1,10 +1,12 @@
 node_modules
 dist
+dist-server
 data/submissions.json
 public/brand
 public/hero
 public/icons
 public/favicon.png
+public/apple-touch-icon.png
 _opt_test
 .DS_Store
 *.log
