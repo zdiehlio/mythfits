@@ -9,7 +9,9 @@ const approach = site.approach;
     <div class="shell">
       <p class="eyebrow">{{ approach.eyebrow }}</p>
       <h2>{{ approach.title }}</h2>
-      <p class="section-intro">{{ approach.intro }}</p>
+      <p v-for="(paragraph, index) in approach.intro" :key="index" class="section-intro">
+        {{ paragraph }}
+      </p>
 
       <ol class="approach-steps">
         <li v-for="(step, index) in approach.steps" :key="step.title">
@@ -17,14 +19,18 @@ const approach = site.approach;
           <div>
             <p class="step-index">0{{ index + 1 }}</p>
             <h3>{{ step.title }}</h3>
-            <p class="step-summary">{{ step.summary }}</p>
-            <p>{{ step.text }}</p>
+            <p v-for="(paragraph, paragraphIndex) in step.paragraphs" :key="paragraphIndex">
+              {{ paragraph }}
+            </p>
           </div>
         </li>
       </ol>
 
       <div class="commitments">
-        <h3>{{ approach.commitmentsTitle }}</h3>
+        <div class="commitments-head">
+          <p class="eyebrow">{{ approach.commitmentsTitle }}</p>
+          <h3>{{ approach.commitmentsHeadline }}</h3>
+        </div>
         <ul>
           <li v-for="item in approach.commitments" :key="item.title">
             <h4>{{ item.title }}</h4>

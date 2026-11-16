@@ -9,7 +9,7 @@ import { site } from "../content/site.js";
         <source srcset="/brand/logo-dark-background-stacked.webp" type="image/webp" />
         <img :src="site.stackedLogo" alt="Mythfits" width="1774" height="887" />
       </picture>
-      <p>{{ site.footer.text }}</p>
+      <p class="footer-lines">{{ site.footer.text }}</p>
       <nav aria-label="Footer">
         <a v-for="item in site.nav" :key="item.id" :href="`#${item.id}`">{{ item.label }}</a>
       </nav>

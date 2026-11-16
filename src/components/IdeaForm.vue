@@ -8,7 +8,8 @@ const values = reactive({
   email: "",
   idea: "",
   helps: "",
-  stage: "explore",
+  tried: "",
+  contribute: "",
   company: "",
 });
 const errors = reactive({
@@ -16,7 +17,7 @@ const errors = reactive({
   email: "",
   idea: "",
   helps: "",
-  stage: "",
+  contribute: "",
 });
 const status = ref("idle");
 const formError = ref("");
@@ -38,11 +39,12 @@ function validate() {
       : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())
         ? ""
         : "That email does not look complete.",
-    idea: values.idea.trim().length >= 10 ? "" : "Share a little more about what you want to build.",
-    helps: values.helps.trim().length >= 10 ? "" : "Tell us who it helps, even in a sentence.",
-    stage: form.stages.some((stage) => stage.value === values.stage)
-      ? ""
-      : "Choose the kind of partnership you need.",
+    idea: values.idea.trim().length >= 10 ? "" : "Share a little more about the idea or the problem.",
+    helps: values.helps.trim().length >= 10 ? "" : "Tell us who it could help, even in a sentence.",
+    contribute:
+      values.contribute.trim().length >= 10
+        ? ""
+        : "Tell us what you would bring, or where you need help.",
   };
   applyErrors(next);
   return Object.values(next).every((message) => !message);
@@ -62,7 +64,8 @@ async function onSubmit() {
         email: values.email,
         idea: values.idea,
         helps: values.helps,
-        stage: values.stage,
+        tried: values.tried,
+        contribute: values.contribute,
         company: values.company,
       }),
     });
@@ -91,7 +94,8 @@ function reset() {
   values.email = "";
   values.idea = "";
   values.helps = "";
-  values.stage = "explore";
+  values.tried = "";
+  values.contribute = "";
   values.company = "";
   clearErrors();
   formError.value = "";
@@ -105,7 +109,7 @@ function reset() {
       <div class="talk-intro">
         <p class="eyebrow">{{ form.eyebrow }}</p>
         <h2>{{ form.title }}</h2>
-        <p>{{ form.intro }}</p>
+        <p v-for="(paragraph, index) in form.intro" :key="index">{{ paragraph }}</p>
       </div>
 
       <div class="form-card">
@@ -184,21 +188,27 @@ function reset() {
             <p v-if="errors.helps" id="helps-error" class="field-error">{{ errors.helps }}</p>
           </div>
 
-          <div class="field" :class="{ invalid: errors.stage }">
-            <label for="stage">{{ form.fields.stage }}</label>
-            <select
-              id="stage"
-              v-model="values.stage"
-              name="stage"
+          <div class="field">
+            <label for="tried">
+              {{ form.fields.tried }}
+              <span class="optional">(Optional)</span>
+            </label>
+            <textarea id="tried" v-model="values.tried" name="tried" rows="3"></textarea>
+          </div>
+
+          <div class="field" :class="{ invalid: errors.contribute }">
+            <label for="contribute">{{ form.fields.contribute }}</label>
+            <textarea
+              id="contribute"
+              v-model="values.contribute"
+              @input="touch('contribute')"
+              name="contribute"
               required
-              :aria-invalid="Boolean(errors.stage)"
-              :aria-describedby="errors.stage ? 'stage-error' : undefined"
-            >
-              <option v-for="stage in form.stages" :key="stage.value" :value="stage.value">
-                {{ stage.label }}
-              </option>
-            </select>
-            <p v-if="errors.stage" id="stage-error" class="field-error">{{ errors.stage }}</p>
+              rows="4"
+              :aria-invalid="Boolean(errors.contribute)"
+              :aria-describedby="errors.contribute ? 'contribute-error' : undefined"
+            ></textarea>
+            <p v-if="errors.contribute" id="contribute-error" class="field-error">{{ errors.contribute }}</p>
           </div>
 
           <p v-if="formError" class="form-error" role="alert">{{ formError }}</p>

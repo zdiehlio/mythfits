@@ -1,5 +1,4 @@
 export const MAX_BODY = 20_000;
-const STAGES = new Set(["explore", "prototype", "refine", "unsure"]);
 
 function clean(value, max) {
   return String(value ?? "")
@@ -21,7 +20,8 @@ export function validateIdea(input) {
     email: clean(input.email, 200),
     idea: cleanBlock(input.idea, 4000),
     helps: cleanBlock(input.helps, 2000),
-    stage: clean(input.stage, 40),
+    tried: cleanBlock(input.tried, 2000),
+    contribute: cleanBlock(input.contribute, 2000),
   };
   const errors = {};
 
@@ -31,12 +31,14 @@ export function validateIdea(input) {
     errors.email = "That email does not look complete.";
   }
   if (idea.idea.length < 10) {
-    errors.idea = "Share a little more about what you want to build.";
+    errors.idea = "Share a little more about the idea or the problem.";
   }
   if (idea.helps.length < 10) {
-    errors.helps = "Tell us who it helps, even in a sentence.";
+    errors.helps = "Tell us who it could help, even in a sentence.";
   }
-  if (!STAGES.has(idea.stage)) errors.stage = "Choose the kind of partnership you need.";
+  if (idea.contribute.length < 10) {
+    errors.contribute = "Tell us what you would bring, or where you need help.";
+  }
 
   return { idea, errors };
 }

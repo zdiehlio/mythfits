@@ -20,7 +20,7 @@ const structuredData = {
       logo: `${url}${site.logo.slice(1)}`,
       image: `${url}${site.shareImage.slice(1)}`,
       description: site.description,
-      slogan: site.hero.title,
+      slogan: site.hero.title.replace(/\s+/g, " "),
       knowsAbout: site.seo.knowsAbout,
       serviceType: site.seo.serviceTypes,
       areaServed: "Worldwide",

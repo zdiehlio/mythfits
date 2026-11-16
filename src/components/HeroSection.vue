@@ -8,14 +8,12 @@ const hero = site.hero;
   <section id="top" class="hero">
     <div class="hero-copy shell">
       <h1>{{ hero.title }}</h1>
-      <p class="lede">{{ hero.lede }}</p>
-      <p class="support">{{ hero.support }}</p>
+      <p v-for="(paragraph, index) in hero.paragraphs" :key="index">{{ paragraph }}</p>
       <div class="hero-actions">
         <a class="button" :href="hero.primaryCta.href">
           {{ hero.primaryCta.label }}
           <span aria-hidden="true">→</span>
         </a>
-        <a class="text-link" :href="hero.secondaryCta.href">{{ hero.secondaryCta.label }}</a>
       </div>
     </div>
     <picture class="hero-media">

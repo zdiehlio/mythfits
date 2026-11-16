@@ -8,7 +8,7 @@ export const site = {
   name: "Mythfits",
   url: "https://mythfits.io/",
   description:
-    "Mythfits is an engineering, AI, and prototyping partner for ideas that strengthen communities or help the planet. Explore, prototype, and test with us.",
+    "At Mythfits, we bring engineering, open minds, and experimentation to ideas that help people live more fully, strengthen communities, and care for the planet.",
   seo: {
     knowsAbout: [
       "Software engineering",
@@ -36,11 +36,13 @@ export const site = {
     { id: "talk", label: "Let's talk", cta: true },
   ],
   hero: {
-    title: "Bring impactful ideas to life.",
-    lede: "Engineering, AI, and prototypes for stronger communities and a healthier planet.",
-    support: "For people with potential who need a way to build.",
-    primaryCta: { label: "Tell us your idea", href: "#talk" },
-    secondaryCta: { label: "Explore the vision", href: "#vision" },
+    title: "Every idea starts\nas an ember.",
+    paragraphs: [
+      "Something you notice. Something you wish existed. A possibility that stays with you.",
+      "It takes care, work, and people willing to build to turn that ember into a flame.",
+      "At Mythfits, we bring engineering, open minds, and experimentation to ideas that help people live more fully, strengthen communities, and care for the planet.",
+    ],
+    primaryCta: { label: "Bring your ember", href: "#talk" },
     image: "/hero/phoenix-hero-desktop.png",
   },
   process: [
@@ -63,121 +65,155 @@ export const site = {
   approach: {
     id: "approach",
     eyebrow: "Our approach",
-    title: "A partnership for people who need a way to build.",
-    intro:
-      "You bring the idea and the reason it matters. Mythfits brings engineering, AI, and prototyping. We stay in it together, from the first conversation through a version you can actually test.",
+    title: "Give the idea somewhere to grow.",
+    intro: [
+      "You don't need a finished plan or all the right skills to begin. You need something you care about and a willingness to work on it.",
+      "We start by listening. Together, we ask questions, explore possibilities, and build something we can learn from. Your experience helps shape the work at every step.",
+    ],
     steps: [
       {
         icon: "/icons/explore.svg",
         title: "Explore",
-        summary: "Find a way forward.",
-        text: "We start by understanding the idea, who it is for, and what would count as working. Then we name a small first step — and say honestly if Mythfits is the right partner.",
+        paragraphs: [
+          "Every idea has a reason behind it. What have you noticed? Who could it help? What have you tried?",
+          "We work through those questions together and find a practical first step.",
+        ],
       },
       {
         icon: "/icons/prototype.svg",
         title: "Prototype",
-        summary: "Make the idea tangible.",
-        text: "We design and build a version you can hold, click, or try in the field. The point is to learn from something real, not to polish a plan that has never met the world.",
+        paragraphs: [
+          "We turn what we've imagined into something you can hold, click, or try in the world.",
+          "The first version gives us something to work with. We discover what's possible, what's difficult, and what needs another look.",
+        ],
       },
       {
         icon: "/icons/refine.svg",
         title: "Test & refine",
-        summary: "Learn. Tinker. Repeat.",
-        text: "You try it with the people it is meant to help. We pay attention to what breaks, what matters, and what to change, then we build the next version.",
+        paragraphs: [
+          "We try it with the people it's meant to help and listen to what happens.",
+          "Some things will work. Others will surprise us. We use what we learn to decide what to improve, rethink, or leave behind.",
+        ],
       },
     ],
     commitmentsTitle: "How we partner",
+    commitmentsHeadline: "We build with you.",
     commitments: [
       {
-        title: "You keep the purpose",
-        text: "The idea stays yours. We do not take the brief and disappear with it.",
+        title: "Bring what you know.",
+        text: "Your experience with the problem, your relationships, and the questions you've been asking all matter. You don't need technical skills to make a meaningful contribution.",
       },
       {
-        title: "Decisions stay shared",
-        text: "What we build, what we skip, and when we stop are choices we make together.",
+        title: "Be part of the work.",
+        text: "Bringing an idea to life takes participation. We agree on what each of us can contribute and stay involved as the idea develops.",
       },
       {
-        title: "We start small enough to learn",
-        text: "A narrow prototype first. The work widens only when the idea earns it.",
+        title: "Make the arrangement clear.",
+        text: "Depending on the project, we may work through paid engagements, shared ownership, or another agreed exchange of contributions. We discuss responsibilities, scope, and ownership before we start.",
+      },
+      {
+        title: "Start within reach.",
+        text: "We choose a first step that fits the time, resources, and skills available. What we learn helps us decide where to go next.",
       },
     ],
   },
   vision: {
     id: "vision",
     eyebrow: "The vision",
-    title: "Potential needs a path into the world.",
+    title: "Good ideas deserve a way into the world.",
     paragraphs: [
-      "Mythfits is for people who can already see a better version of something — a community system, a tool, a practice, a place — and do not yet have a way to build it.",
-      "The work we take on should strengthen communities or leave the planet healthier. Those are the tests we use when we decide where to spend engineering time.",
-      "Impact, here, is practical. Someone can use the thing. A group can carry it forward. The next person with potential has proof that a way to build exists.",
+      "Someone notices a need. Imagines a different approach. Wonders whether a small change could make life better.",
+      "Too often, that's where it stops. The person with the idea doesn't have the technical skills, resources, or connections to take it further.",
+      "Mythfits exists to help open that door.",
+      "Today, we start with engineering and prototyping. We work alongside people who care about an idea, turning possibilities into something we can build, test, and improve. Something that helps us live more intentionally, connect with one another, or care for the world around us.",
+      "Over time, we're building toward a shared gathering place where different skills and perspectives meet. Engineers alongside artists. Scientists alongside gardeners. People making, moving, studying, and exchanging ideas around a common hearth.",
+      "A place where you can bring a question, find people willing to work on it, and contribute what you know. Where worthwhile ideas gain momentum through shared effort and ownership.",
+      "That place grows from the work we begin together today.",
     ],
-    asideTitle: "What we build toward",
-    aside: ["Stronger communities", "A healthier planet", "A way for potential to become real"],
+  },
+  fit: {
+    id: "fit",
+    eyebrow: "What belongs here",
+    title: "What do you wish existed?",
+    paragraphs: [
+      "A quiet signal that helps someone care for their plants. A tool that helps parents stay aware while children explore. A better way for neighbors to share resources or spend time together.",
+    ],
+    intro: "We're interested in ideas that help people:",
+    points: [
+      "Live with more intention and awareness.",
+      "Explore, learn, and participate in the world.",
+      "Build stronger relationships and communities.",
+      "Care for living things and the planet we share.",
+    ],
+    closing:
+      "An idea doesn't have to change everyone's life to matter. Tell us whose life it could improve, and how.",
   },
   faq: {
     id: "questions",
     eyebrow: "Questions",
-    title: "What to know before you reach out.",
+    title: "A few things you might be wondering.",
     items: [
       {
-        question: "What does Mythfits do?",
+        question: "How developed does my idea need to be?",
         answer:
-          "Mythfits is an engineering, AI, and prototyping partner for people with ideas that strengthen communities or leave the planet healthier. We help you explore the idea, build a working prototype, and test and refine it with the people it is meant to help.",
+          "You can come with a sketch, an early prototype, or a problem you haven't figured out yet. Help us understand what you've noticed, why you care, and what you hope could be different.",
       },
       {
-        question: "Who is Mythfits for?",
+        question: "Do I need technical experience?",
         answer:
-          "People who can already see a better version of something — a community system, a tool, a practice, a place — and do not yet have a way to build it. You bring the idea and the reason it matters; we bring the engineering.",
+          "No. You might bring firsthand experience, community relationships, research, creative skills, or the ability to test something in a real setting. We work out how our contributions fit together.",
       },
       {
-        question: "What kinds of projects do you take on?",
+        question: "What can Mythfits help build?",
         answer:
-          "Social impact and community projects, and climate and environmental ideas. Every project has to strengthen communities or leave the planet healthier. Those are the tests we use when we decide where to spend engineering time.",
+          "Our starting point is engineering and prototyping, including software, connected devices, and tools people can use in everyday life. We explore what a project needs and are honest about what we can take on and where other expertise is needed.",
       },
       {
-        question: "What can you build?",
+        question: "How do you choose projects?",
         answer:
-          "Prototypes you can hold, click, or try in the field — software, AI-powered tools, and engineered things that make an idea tangible. We start with a narrow first version and widen the work only when the idea earns it.",
+          "We look at who the idea could help, the commitment behind it, and whether we have the capacity and skills to make a useful contribution. Together, we need to be able to identify a practical first step.",
       },
       {
-        question: "How does working together start?",
+        question: "What if I don't have funding?",
         answer:
-          "Tell us your idea and who it helps. We read every note. If there is a fit, we write back about a first conversation, where we name a small first step and say honestly if Mythfits is the right partner.",
+          "You don't need funding to get started with Mythfits. Our focus is bringing together people who care about an idea and are willing to contribute their skills, time, and effort to build it. Shared ownership, including equity where appropriate, is our preferred foundation for that work. We agree on contributions, responsibilities, and any project costs together, then find a first step within reach. We want to explore how far committed people can take a worthwhile idea without making fundraising the starting line.",
       },
       {
-        question: "Do I keep my idea?",
+        question: "Who owns what we create?",
         answer:
-          "Yes. The idea and its purpose stay yours. What we build, what we skip, and when we stop are decisions we make together.",
+          "We agree on ownership and how the work can be used before building begins. The arrangement depends on the project and the partnership, and should be clear to everyone involved.",
+      },
+      {
+        question: "What happens after I reach out?",
+        answer:
+          "We review what you share for fit and capacity. If there's a promising way to work together, we'll arrange a conversation to explore the idea and a possible first step.",
       },
     ],
   },
   form: {
     id: "talk",
     eyebrow: "Let's talk",
-    title: "Tell us your idea.",
-    intro:
-      "Share enough for us to understand what you want to build and who it helps. We read every note. If there is a fit, we write back about a first conversation.",
-    submit: "Send the idea",
+    title: "Tell us what's been on your mind.",
+    intro: [
+      "You don't need a polished pitch. Share the idea, the problem behind it, and why it matters to you.",
+      "Tell us where you're stuck and what you'd like to contribute. We'll see whether there's a way to move it forward together.",
+    ],
+    submit: "Bring your ember",
     sending: "Sending…",
-    successTitle: "We have your idea.",
+    successTitle: "We have your ember.",
     successBody:
-      "Thank you. If there is a way to build this together, we will reply at the email you gave us.",
+      "Thank you. We'll review it for fit and capacity. If there's a promising way to move it forward together, we'll reply at the email you gave us.",
     another: "Send another idea",
     fields: {
       name: "Your name",
-      email: "Email",
-      idea: "What do you want to build?",
-      helps: "Who does it help, and how?",
-      stage: "Where do you need a partner?",
+      email: "Your email",
+      idea: "What's your idea, or the problem you want to solve?",
+      helps: "Who could it help, and how?",
+      tried: "What have you tried or learned so far?",
+      contribute: "What would you bring to the work, and where do you need help?",
     },
-    stages: [
-      { value: "explore", label: "Explore — help me find a way forward" },
-      { value: "prototype", label: "Prototype — help me make it tangible" },
-      { value: "refine", label: "Test & refine — I have something to learn from" },
-      { value: "unsure", label: "Not sure yet" },
-    ],
   },
   footer: {
-    text: "Engineering, AI, and prototypes for stronger communities and a healthier planet.",
+    text: "Engineering, open minds, and experimentation.\nIdeas into reality.",
   },
 };

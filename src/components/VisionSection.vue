@@ -13,14 +13,7 @@ const vision = site.vision;
         <p v-for="(paragraph, index) in vision.paragraphs" :key="index">{{ paragraph }}</p>
       </div>
       <aside>
-        <picture>
-          <source srcset="/brand/phoenix-emblem.webp" type="image/webp" />
-          <img :src="site.emblem" alt="" width="1536" height="1024" />
-        </picture>
-        <h3>{{ vision.asideTitle }}</h3>
-        <ul>
-          <li v-for="line in vision.aside" :key="line">{{ line }}</li>
-        </ul>
+        <img src="/brand/vision-mythfits.png" alt="" width="1295" height="941" />
       </aside>
     </div>
   </section>

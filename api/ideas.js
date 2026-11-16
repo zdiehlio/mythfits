@@ -1,9 +1,7 @@
 import { Resend } from "resend";
-import { site } from "../src/content/site.js";
 import { MAX_BODY, validateIdea } from "../server/validate-idea.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const stageLabels = Object.fromEntries(site.form.stages.map((stage) => [stage.value, stage.label]));
 
 function reply(status, body) {
   return Response.json(body, { status });
@@ -34,13 +32,18 @@ export async function POST(request) {
     text: [
       `Name: ${idea.name}`,
       `Email: ${idea.email}`,
-      `Stage: ${stageLabels[idea.stage]}`,
       "",
-      "What they want to build:",
+      "What's their idea, or the problem they want to solve:",
       idea.idea,
       "",
-      "Who it helps:",
+      "Who it could help, and how:",
       idea.helps,
+      "",
+      "What they have tried or learned so far:",
+      idea.tried || "Not shared",
+      "",
+      "What they would bring, and where they need help:",
+      idea.contribute,
     ].join("\n"),
   });
 
