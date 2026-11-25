@@ -3,13 +3,16 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 import { site } from "../content/site.js";
 
 const open = ref(false);
+const menuToggle = ref(null);
 
 function close() {
   open.value = false;
 }
 
 function onKeydown(event) {
-  if (event.key === "Escape") close();
+  if (event.key !== "Escape" || !open.value) return;
+  close();
+  menuToggle.value.focus();
 }
 
 onMounted(() => document.addEventListener("keydown", onKeydown));
@@ -28,6 +31,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", onKeydown));
       </a>
 
       <button
+        ref="menuToggle"
         class="menu-toggle"
         type="button"
         :aria-expanded="open"
