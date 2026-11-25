@@ -1,0 +1,13 @@
+# First Codex assignment (copy everything below into Codex)
+
+You are my engineering partner for Mythfits. I want you to take ownership of the implementation while I focus on founder-level decisions and creative direction. I have added a `mythfits-codex-onboarding/` directory with the context, design reference and assets we established in ChatGPT.
+
+Read its README, proposed AGENTS.md, all four docs, and the interactive v3 HTML before making changes. Inspect the existing repository and its own instructions, `git status`, architecture, package scripts, assets, routes, current landing page, contact form and deployment setup. Identify any conflicts or existing uncommitted work. Preserve everything unrelated. Do not overwrite existing instructions or docs; merge relevant new guidance safely and flag conflicts.
+
+Our first feature is **The Awakening**: replace or adapt the existing hero into an interactive ember-to-phoenix experience matching `prototypes/mythfits-awakening-v3.html`. The detailed phoenix is important to the brand. Keep the scaffold wing, finished feather wing, copper glow, staged formation, sparks, final copy, skip and replay. Use the supplied artwork; avoid reverting to a simplistic SVG. The rest of the current site should remain functional and intact. The reference is not production code or a replacement for the full site.
+
+Start with a concise repository assessment, implementation plan and proposed file locations. If no blocking conflict or consequential decision needs my input, proceed with the first feature on a dedicated branch such as `feature/phoenix-awakening` (or use an equivalent safe workflow if already on a feature branch). Follow existing project conventions, avoid unnecessary dependencies and do not deploy or push changes. Keep the original site recoverable. Never overwrite unrelated local changes.
+
+Build the hero as maintainable production components using the existing stack. Follow the acceptance checklist in DESIGN.md, including a static fallback, accessible activation/skip/replay, reduced motion, responsive behavior, asset optimization, cleanup and preserved navigation/contact behavior. Keep animation optional, not a gate. Preserve the current content, forms, metadata, and existing integrations. If actual repository constraints conflict with the prototype, explain the tradeoff and make the smallest safe adaptation.
+
+Run the appropriate repository checks and browser tests, show a local preview or screenshots, and provide the command I should use to run it. At completion, summarize changes, test results, remaining limitations and any design decisions you made. Stop at the hero review checkpoint. Do not begin the remaining roadmap phases or deploy until I approve.

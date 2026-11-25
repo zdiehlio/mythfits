@@ -22,8 +22,7 @@ Finish the hero first. Don't rebuild the site from scratch, adopt a new framewor
 - Phase 3 was approved after the responsive alignment guidelines were applied. The Approach section describes what we do together in each step, how we agree on contributions and ownership, and how to start a conversation. The funding FAQ distinguishes reaching out from agreeing to build.
 - Phase 4 was approved after local review of the hearth illustration and proposed spaces. The Vision section identifies the current prototyping studio and presents the future lab as a concept through the existing hearth illustration and expandable descriptions of the proposed spaces.
 - Phase 5 was approved after local review of the idea submission flow. The idea form explains how submissions are used, guides visitors to field errors, preserves answers when a request fails, and confirms receipt on success. The local file and production email delivery paths use the existing submission contract.
-
-- Phase 6 was approved after local review. The release candidate is ready for pull request review.
+- **Phase 6 is complete.** [PR #1](https://github.com/zdiehlio/mythfits/pull/1) was merged, and the site is live at [mythfits.io](https://mythfits.io/). The founder verified that the production idea submission form works.
 
 ## Phase 6 local release checks
 
@@ -31,9 +30,9 @@ Finish the hero first. Don't rebuild the site from scratch, adopt a new framewor
 - **Responsive behavior.** The hero copy and controls retained their positions through ignition and replay at 320px, 390px, 768px, and 1440px, and at 844×390 in landscape after fonts loaded. Actual 200% and 400% browser zoom showed no horizontal overflow, hero overlap, or clipped form fields.
 - **Performance.** The hero preload now requests the artwork used by the page, and the footer logo loads lazily. The Vision illustration went from about 2.28 MB to 381 kB while keeping its dimensions and transparency. One cold local browser run per viewport measured about 403 kB of same-origin subresources, 312 ms LCP, and CLS of 0.0006 on mobile and 0.0022 on desktop. The mobile baseline transferred about 663 kB of same-origin subresources. These unthrottled loopback readings are local estimates.
 - **Search and sharing.** The built HTML contains the static hero, section anchors, canonical URL, social metadata, and structured data. The social image, robots file, sitemap, and configured preview-domain noindex rule were checked in the build and configuration.
-- **Idea submission.** An isolated preview with synthetic data verified validation, retained answers after failure, duplicate-submit protection, one local save, and a clean reset. Production email delivery remains unverified.
+- **Idea submission.** An isolated preview with synthetic data verified validation, retained answers after failure, duplicate-submit protection, one local save, and a clean reset.
 
-### After release authorization
+### Checklist for future releases
 
 1. Review the candidate and confirm public artwork rights and any attribution requirements.
 2. Verify the authorized Vercel preview’s indexing headers and confirm the Resend configuration. Send a synthetic idea to a designated test recipient and confirm delivery and reply-to.
