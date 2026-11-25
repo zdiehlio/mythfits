@@ -1,7 +1,7 @@
 # Website experience | The Awakening
 
 ## Scope and reference
-The self-contained reference is `prototypes/mythfits-awakening-v3.html` in the local onboarding package. The existing website (https://mythfits.io/) is the baseline for routes, content, form behavior and branding. Only the hero redesign is in scope for the first implementation.
+The [Awakening v3 prototype](archive/awakening/mythfits-awakening-v3.html) is the self-contained design reference. The existing website (https://mythfits.io/) is the baseline for routes, content, form behavior and branding. Only the hero redesign is in scope for the first implementation.
 
 The website should invite people into a world where ideas become real. The visitor participates in the metaphor by igniting an ember that grows into the phoenix. Never make the animation a gate to information or contact.
 

@@ -15,4 +15,4 @@ Run `npm run preview` to build and serve the prerendered site at `http://127.0.0
 
 The hero uses the transparent WebP from the v3 prototype. Vue manages its static, idle, igniting and revealed states. Canvas composites the staged body, wings and coals during ignition, then hands off to the static image. The prerendered page ships with the complete hero copy and links. Once the artwork decodes, visitors who allow motion can light the ember. Reduced motion keeps the static hero. The sticky header preserves access to the rest of the page across all hero states.
 
-See [design](docs/DESIGN.md), [brand](docs/BRAND.md), [vision](docs/VISION.md) and [roadmap](docs/ROADMAP.md). The supplied reference prototype and master artwork were supplied in the local onboarding package.
+See [design](docs/DESIGN.md), [brand](docs/BRAND.md), [vision](docs/VISION.md) and [roadmap](docs/ROADMAP.md). The original prototype and master artwork are in the [Awakening design archive](docs/archive/awakening/).
