@@ -1,4 +1,12 @@
 export const MAX_BODY = 20_000;
+export const FIELD_LIMITS = {
+  name: 120,
+  email: 200,
+  idea: 4000,
+  helps: 2000,
+  tried: 2000,
+  contribute: 2000,
+};
 
 function clean(value, max) {
   return String(value ?? "")
@@ -16,12 +24,12 @@ function cleanBlock(value, max) {
 
 export function validateIdea(input) {
   const idea = {
-    name: clean(input.name, 120),
-    email: clean(input.email, 200),
-    idea: cleanBlock(input.idea, 4000),
-    helps: cleanBlock(input.helps, 2000),
-    tried: cleanBlock(input.tried, 2000),
-    contribute: cleanBlock(input.contribute, 2000),
+    name: clean(input.name, FIELD_LIMITS.name),
+    email: clean(input.email, FIELD_LIMITS.email),
+    idea: cleanBlock(input.idea, FIELD_LIMITS.idea),
+    helps: cleanBlock(input.helps, FIELD_LIMITS.helps),
+    tried: cleanBlock(input.tried, FIELD_LIMITS.tried),
+    contribute: cleanBlock(input.contribute, FIELD_LIMITS.contribute),
   };
   const errors = {};
 

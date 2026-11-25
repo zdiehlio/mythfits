@@ -7,7 +7,7 @@ import { site } from "../content/site.js";
     <div class="shell footer-inner">
       <picture>
         <source srcset="/brand/logo-dark-background-stacked.webp" type="image/webp" />
-        <img :src="site.stackedLogo" alt="Mythfits" width="1774" height="887" />
+        <img :src="site.stackedLogo" alt="Mythfits" width="1774" height="887" loading="lazy" decoding="async" />
       </picture>
       <p class="footer-lines">{{ site.footer.text }}</p>
       <nav aria-label="Footer">

@@ -5,38 +5,34 @@ const approach = site.approach;
 </script>
 
 <template>
-  <section :id="approach.id" class="approach">
+  <section :id="approach.id" class="approach" tabindex="-1">
     <div class="shell">
       <p class="eyebrow">{{ approach.eyebrow }}</p>
       <h2>{{ approach.title }}</h2>
-      <p v-for="(paragraph, index) in approach.intro" :key="index" class="section-intro">
-        {{ paragraph }}
-      </p>
+      <p class="section-intro">{{ approach.intro }}</p>
 
-      <ol class="approach-steps">
-        <li v-for="(step, index) in approach.steps" :key="step.title">
+      <ol class="approach-steps" role="list">
+        <li v-for="step in approach.steps" :key="step.title">
           <img :src="step.icon" alt="" width="64" height="64" />
-          <div>
-            <p class="step-index">0{{ index + 1 }}</p>
-            <h3>{{ step.title }}</h3>
-            <p v-for="(paragraph, paragraphIndex) in step.paragraphs" :key="paragraphIndex">
-              {{ paragraph }}
-            </p>
-          </div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
         </li>
       </ol>
 
       <div class="commitments">
-        <div class="commitments-head">
-          <p class="eyebrow">{{ approach.commitmentsTitle }}</p>
-          <h3>{{ approach.commitmentsHeadline }}</h3>
-        </div>
-        <ul>
+        <h3>{{ approach.commitmentsHeadline }}</h3>
+        <ul role="list">
           <li v-for="item in approach.commitments" :key="item.title">
             <h4>{{ item.title }}</h4>
             <p>{{ item.text }}</p>
           </li>
         </ul>
+        <div class="approach-next">
+          <p>{{ approach.nextStep }}</p>
+          <a class="button button-dark" :href="site.hero.primaryCta.href">
+            {{ site.hero.primaryCta.label }} <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

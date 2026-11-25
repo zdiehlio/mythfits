@@ -34,13 +34,37 @@
 
     <link rel="icon" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="preload" as="image" href="/hero/phoenix-hero-desktop.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/hero/phoenix-awakening.webp" type="image/webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <noscript>
+      <style>
+        @media (max-width: 720px) {
+          .site-header, .site-header .site-nav { position: static; }
+          .site-header .header-bar { flex-wrap: wrap; gap: 0; padding-block: 0.5rem; }
+          .site-header .menu-toggle { display: none; }
+          .site-header .site-nav {
+            display: flex;
+            flex: 1 0 100%;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.25rem 0.75rem;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+          }
+          .site-header .site-nav a { padding: 0.45rem 0; }
+          .site-header .site-nav a.cta { margin: 0; padding-inline: 0.75rem; }
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <div id="app"></div>

@@ -43,7 +43,9 @@ export const site = {
       "At Mythfits, we bring engineering, open minds, and experimentation to ideas that help people live more fully, strengthen communities, and care for the planet.",
     ],
     primaryCta: { label: "Bring your ember", href: "#talk" },
-    image: "/hero/phoenix-hero-desktop.png",
+    image: "/hero/phoenix-awakening.webp",
+    revealTitle: "Together, we bring it to life.",
+    revealLead: "Engineering, creativity and experimentation for a more human world.",
   },
   process: [
     {
@@ -66,69 +68,87 @@ export const site = {
     id: "approach",
     eyebrow: "Our approach",
     title: "Give the idea somewhere to grow.",
-    intro: [
-      "You don't need a finished plan or all the right skills to begin. You need something you care about and a willingness to work on it.",
-      "We start by listening. Together, we ask questions, explore possibilities, and build something we can learn from. Your experience helps shape the work at every step.",
-    ],
+    intro:
+      "Start with something you've noticed, a sketch, or an early prototype. You bring what you know about the problem. We bring engineering and prototyping. Together we choose a small first step that can teach us something.",
     steps: [
       {
         icon: "/icons/explore.svg",
         title: "Explore",
-        paragraphs: [
-          "Every idea has a reason behind it. What have you noticed? Who could it help? What have you tried?",
-          "We work through those questions together and find a practical first step.",
-        ],
+        text: "Tell us who runs into the problem, what they do today, and what you've already tried. Together we decide what we need to learn first.",
       },
       {
         icon: "/icons/prototype.svg",
         title: "Prototype",
-        paragraphs: [
-          "We turn what we've imagined into something you can hold, click, or try in the world.",
-          "The first version gives us something to work with. We discover what's possible, what's difficult, and what needs another look.",
-        ],
+        text: "We build the simplest version we can try, such as a mockup, a small tool, or a device prototype. You help us check it against the way people would actually use it.",
       },
       {
         icon: "/icons/refine.svg",
         title: "Test & refine",
-        paragraphs: [
-          "We try it with the people it's meant to help and listen to what happens.",
-          "Some things will work. Others will surprise us. We use what we learn to decide what to improve, rethink, or leave behind.",
-        ],
+        text: "We try the prototype with the people it could help. What they do and tell us guides what we change, what we test next, and whether the idea is worth pursuing.",
       },
     ],
-    commitmentsTitle: "How we partner",
-    commitmentsHeadline: "We build with you.",
+    commitmentsHeadline: "How we work together",
     commitments: [
       {
         title: "Bring what you know.",
-        text: "Your experience with the problem, your relationships, and the questions you've been asking all matter. You don't need technical skills to make a meaningful contribution.",
+        text: "Your firsthand experience, community relationships, or ability to try something in a real setting can shape the work. You can contribute from the start with the skills you already have.",
       },
       {
-        title: "Be part of the work.",
-        text: "Bringing an idea to life takes participation. We agree on what each of us can contribute and stay involved as the idea develops.",
+        title: "Agree on a first step.",
+        text: "We compare how much time each of us can give, what skills the project needs, and what it might cost. Together we choose a first step we can realistically take.",
       },
       {
-        title: "Make the arrangement clear.",
-        text: "Depending on the project, we may work through paid engagements, shared ownership, or another agreed exchange of contributions. We discuss responsibilities, scope, and ownership before we start.",
+        title: "Choose a partnership arrangement.",
+        text: "We prefer shared ownership when it fits the project, including equity where appropriate. Paid engagements and other arrangements are also possible by mutual agreement.",
       },
       {
-        title: "Start within reach.",
-        text: "We choose a first step that fits the time, resources, and skills available. What we learn helps us decide where to go next.",
+        title: "Set the terms before building.",
+        text: "We agree on what each person will do, what costs are involved, who owns what we create, and how it can be used.",
       },
     ],
+    nextStep: "Tell us what you've noticed and where you'd like help.",
   },
   vision: {
     id: "vision",
     eyebrow: "The vision",
     title: "Good ideas deserve a way into the world.",
-    paragraphs: [
-      "Someone notices a need. Imagines a different approach. Wonders whether a small change could make life better.",
-      "Too often, that's where it stops. The person with the idea doesn't have the technical skills, resources, or connections to take it further.",
-      "Mythfits exists to help open that door.",
-      "Today, we start with engineering and prototyping. We work alongside people who care about an idea, turning possibilities into something we can build, test, and improve. Something that helps us live more intentionally, connect with one another, or care for the world around us.",
-      "Over time, we're building toward a shared gathering place where different skills and perspectives meet. Engineers alongside artists. Scientists alongside gardeners. People making, moving, studying, and exchanging ideas around a common hearth.",
-      "A place where you can bring a question, find people willing to work on it, and contribute what you know. Where worthwhile ideas gain momentum through shared effort and ownership.",
-      "That place grows from the work we begin together today.",
+    studioTitle: "What we do today",
+    studio:
+      "Mythfits is an engineering and prototyping studio. We work alongside people who care about an idea, building small versions they can try with the people it could help.",
+    hearthTitle: "A place to gather around a shared hearth",
+    hearth:
+      "Our long-term vision is a gathering place where people can bring a question and find collaborators with different skills. Around the hearth, a gardener might bring a growing problem to an engineer. A maker could sketch a tool with them and bring it back to the group to try.",
+    caption: "Concept illustration of the future Mythfits lab.",
+    spacesTitle: "Spaces we imagine around the hearth",
+    spaces: [
+      {
+        name: "Tinker Town",
+        purpose: "A workshop for engineering, making, and prototyping where people could turn sketches into things they can try.",
+      },
+      {
+        name: "Druid’s Grove",
+        purpose: "A place to work with plants, observe living systems, and explore questions about how we care for the natural world.",
+      },
+      {
+        name: "Serenity Peak",
+        purpose: "A quiet space for reflection, mindfulness, and exploring what helps people make room for mental well-being.",
+      },
+      {
+        name: "Proving Grounds",
+        purpose: "A space for movement, physical exploration, and finding ways to stretch what we can do.",
+      },
+      {
+        name: "Science Lab",
+        purpose: "A place to ask questions, run experiments, and share what we discover.",
+      },
+      {
+        name: "Art and craft space",
+        purpose: "A studio for making, designing, and telling stories that give ideas a form other people can experience.",
+      },
+      {
+        name: "Tower of Knowledge",
+        purpose: "A place to read, study, and share knowledge so each project can build on what others have learned.",
+      },
     ],
   },
   fit: {
@@ -176,7 +196,7 @@ export const site = {
       {
         question: "What if I don't have funding?",
         answer:
-          "You don't need funding to get started with Mythfits. Our focus is bringing together people who care about an idea and are willing to contribute their skills, time, and effort to build it. Shared ownership, including equity where appropriate, is our preferred foundation for that work. We agree on contributions, responsibilities, and any project costs together, then find a first step within reach. We want to explore how far committed people can take a worthwhile idea without making fundraising the starting line.",
+          "You can reach out before you have funding. If there's a fit, we talk through what each person can contribute, any project costs, and whether there's a first step within reach. Shared ownership is our preference when it fits the project. We agree on the arrangement together before building.",
       },
       {
         question: "Who owns what we create?",
@@ -198,9 +218,11 @@ export const site = {
       "You don't need a polished pitch. Share the idea, the problem behind it, and why it matters to you.",
       "Tell us where you're stuck and what you'd like to contribute. We'll see whether there's a way to move it forward together.",
     ],
-    submit: "Bring your ember",
-    sending: "Sending…",
-    successTitle: "We have your ember.",
+    requiredNote: "All fields are required unless marked optional.",
+    privacyNote: "We use what you share to review your idea and reply if there’s a fit. Leave out confidential details and other people’s personal information.",
+    submit: "Send your idea",
+    sending: "Sending your idea…",
+    successTitle: "Your idea was received.",
     successBody:
       "Thank you. We'll review it for fit and capacity. If there's a promising way to move it forward together, we'll reply at the email you gave us.",
     another: "Send another idea",
